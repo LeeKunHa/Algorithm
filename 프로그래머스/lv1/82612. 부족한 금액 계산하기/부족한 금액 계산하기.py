@@ -1,9 +1,9 @@
 def solution(price, money, count):
     payment = 0
-    price_ = price
+    price_now = price
     for i in range(1,count+1):
-        payment = payment + price_
-        price_ = price_ + price
+        payment = payment + price_now
+        price_now = price_now + price
     answer = payment - money
     if answer < 0:
         answer = 0
