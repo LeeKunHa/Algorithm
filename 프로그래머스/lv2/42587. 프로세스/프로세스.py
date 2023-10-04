@@ -1,11 +1,11 @@
 from collections import deque
 def solution(priorities, location):
-    priorities_deque = deque([[i,x] for i,x in enumerate(priorities)])
+    queue = deque(enumerate(priorities))
     answer = 0
-    while priorities_deque:
-        while priorities_deque[0][1] != max([x[1] for x in priorities_deque]):
-            priorities_deque.rotate(-1)
-        v = priorities_deque.popleft()
+    while queue:
+        while queue and queue[0][1] != max([x[1] for x in queue]):
+            queue.rotate(-1)
+        v = queue.popleft()
         if v[0] == location:
             return answer+1
         answer = answer+1
