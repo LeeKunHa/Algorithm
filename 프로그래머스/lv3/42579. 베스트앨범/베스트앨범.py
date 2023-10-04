@@ -20,7 +20,3 @@ def solution(genres, plays):
         else:
             answer.append(i[0])
     return answer
-    
-    
-    
-    
