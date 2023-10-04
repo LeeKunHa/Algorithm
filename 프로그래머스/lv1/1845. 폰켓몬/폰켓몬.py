@@ -1,5 +1,9 @@
 def solution(nums):
-    n = int(len(nums)/2)
-    unique = list(set(nums))
-    answer = min(n,len(unique))
+    n = len(nums)//2
+    nums = list(set(nums))
+    answer = min(len(nums),n)
     return answer
+
+
+
+
