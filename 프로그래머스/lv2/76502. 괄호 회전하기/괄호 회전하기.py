@@ -1,19 +1,20 @@
 from collections import deque
 def solution(s):
+    dic = {']':'[','}':'{',')':'('}
+    s = deque(s)
     answer = 0
-    dic = dict({')':'(', ']':'[', '}':'{'})
-    stack = []
-    queue = deque(s)
     for i in range(len(s)):
-        try:
-            for j in queue:
-                if j in ('(','[','{'):
-                    stack.append(j)
-                elif stack[-1] == dic[j]:
-                    stack.pop()
-            if stack == []:
-                answer = answer+1
-        except:
-            pass
-        queue.rotate(-1)
+        succes = True
+        stack = []
+        for j in range(len(s)):
+            if s[j] in ['[','{','(']:
+                stack.append(s[j])
+            elif stack and stack[-1]==dic[s[j]]:
+                stack.pop()
+                pass
+            else:
+                succes = False
+        if succes and not stack:
+            answer = answer+1
+        s.rotate(-1)
     return answer
