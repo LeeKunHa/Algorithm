@@ -1,10 +1,10 @@
 # [level 3] 거스름돈 - 12907 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12907) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12907?language=python3) 
 
 ### 성능 요약
 
-메모리: 11.8 MB, 시간: 716.94 ms
+메모리: 11.8 MB, 시간: 357.58 ms
 
 ### 구분
 
