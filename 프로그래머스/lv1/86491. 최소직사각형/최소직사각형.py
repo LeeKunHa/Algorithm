@@ -1,7 +1,6 @@
-import numpy as np
 def solution(sizes):
-    for i in sizes:
-        if i[0] > i[1]:
-            i[0],i[1] = i[1],i[0]
-    answer = int(np.max(sizes, axis=0)[0]) * int(np.max(sizes, axis=0)[1])
+    for i in range(len(sizes)):
+        if sizes[i][0] > sizes[i][1]:
+            sizes[i][0],sizes[i][1] = sizes[i][1],sizes[i][0]
+    answer = max([x[0] for x in sizes])*max([x[1] for x in sizes])
     return answer
