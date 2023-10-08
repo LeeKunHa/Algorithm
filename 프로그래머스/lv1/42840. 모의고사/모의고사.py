@@ -14,8 +14,7 @@ def solution(answers):
             index_[1] = index_[1]+1
         if answers[i] == student_3[i]:
             index_[2] = index_[2]+1
-    for i in enumerate(index_):
-        print(i)
-        if i[1] == max(index_):
-            answer.append(i[0]+1)
+    for i,x in enumerate(index_):
+        if x == max(index_):
+            answer.append(i+1)
     return answer
